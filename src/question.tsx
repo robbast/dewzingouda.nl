@@ -41,7 +41,7 @@ export default class Question extends React.PureComponent<QuestionProps & ClassA
           Your browser does not support the audio element.
         </audio>
       </div>
-      <div className="row p-2 g-0 mb-4 text-center card" style={{ backgroundColor: '#eb6334' }}>
+      <div className="row p-1 g-0 mb-4 text-center card" style={{ backgroundColor: '#eb6334' }}>
         <h1 style={{ color: '#fdce43' }} className="mt-4 mb-2">{this.props.title}</h1>
         <p style={{ color: '#fff' }}>{this.props.question}</p>
       </div>
