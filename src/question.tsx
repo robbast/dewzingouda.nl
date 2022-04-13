@@ -21,7 +21,9 @@ export default class Question extends React.PureComponent<QuestionProps & ClassA
     const { answerIndex, answers } = this.props,
       buttons: JSX.Element | JSX.Element[] = answers.map((value: string | number, index: number) => {
         const id = `answer-${index}`
-        return <button type="button" className="btn btn-primary" style={{ color: '#eb6334', backgroundColor: '#fdce43', borderColor: '#fdce43' }}>{value}</button>
+        return <button type="button" className="btn btn-primary" style={{ color: '#000', backgroundColor: '#fdce43', borderColor: '#fdce43' }}>
+            <strong>{value}</strong>
+          </button>
       }),
       images = ['small', 'medium', 'large', 'original'].map((directory) => '/images/' + directory + '/' + this.props.image),
       breakpoints = ['600w', '1200w', '2000w', '4000w'],
@@ -34,17 +36,17 @@ export default class Question extends React.PureComponent<QuestionProps & ClassA
           srcSet={srcset.join(', ')}
           style={{ borderRadius: '1rem' }} />
       </div>
-      <div className="row p-0 g-0 d-flex" style={{ minHeight: '70px' }}>
+      <div className="row p-0 g-0 mb-4 d-flex" style={{ minHeight: '70px' }}>
         <audio controls preload="auto" src={'/audio/' + this.props.audio} style={{ margin: 'auto' }}>
           Your browser does not support the audio element.
         </audio>
       </div>
-      <div className="row text-center" style={{ color: '#fff' }}>
-        <h1 style={{ color: '#fcb900' }} className="mt-4 mb-2">{this.props.title}</h1>
-        <p>{this.props.question}</p>
-        <div className="d-grid gap-2">
-          {buttons}
-        </div>
+      <div className="row p-2 g-0 mb-4 text-center card" style={{ backgroundColor: '#eb6334' }}>
+        <h1 style={{ color: '#fdce43' }} className="mt-4 mb-2">{this.props.title}</h1>
+        <p style={{ color: '#fff' }}>{this.props.question}</p>
+      </div>
+      <div className="d-grid gap-2">
+        {buttons}
       </div>
     </>
   }

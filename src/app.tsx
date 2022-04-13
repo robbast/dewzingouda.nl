@@ -10,9 +10,9 @@ const data: QuestionProps[] = [
     question: 'Waar staat het woord "legi" voor?',
     answerIndex: 0,
     answers: [
-      'a',
-      'b',
-      'c'
+      'recht',
+      'school',
+      'onderwijs'
     ]
   },
   {
@@ -20,11 +20,11 @@ const data: QuestionProps[] = [
     audio: 'carillon.m4a',
     title: 'Carillon',
     question: 'Waar komt het melodietje van het carillon vandaan?',
-    answerIndex: 0,
+    answerIndex: 1,
     answers: [
-      'a',
-      'b',
-      'c'
+      'Ria Blos',
+      'Maria Blom',
+      'Rita Bos'
     ]
   },
   {
@@ -32,23 +32,23 @@ const data: QuestionProps[] = [
     audio: 'catharina-gasthuis.m4a',
     title: 'Catharina Gasthuis',
     question: 'Wanneer hield het Catharina Gasthuis op met bestaan als ziekenhuis?',
-    answerIndex: 0,
+    answerIndex: 2,
     answers: [
-      'a',
-      'b',
-      'c'
+      '1820',
+      '1906',
+      '1910'
     ]
   },
   {
     image: 'de-waag.jpg',
     audio: 'de-waag.m4a',
     title: 'De Waag',
-    question: 'Vanaf wanneer bestaat de Goudse Kaasmarkt?',
+    question: 'Sinds wanneer bestaat de Goudse Kaasmarkt?',
     answerIndex: 0,
     answers: [
-      'a',
-      'b',
-      'c'
+      'Sinds de 15de eeuw',
+      'Sinds de 16de eeuw',
+      'Sinds de 17de eeuw'
     ]
   },
   {
@@ -56,11 +56,11 @@ const data: QuestionProps[] = [
     audio: 'donkere-sluis.m4a',
     title: 'Donkere Sluis',
     question: 'Wanneer werd de Donkere Sluis gebouwd?',
-    answerIndex: 0,
+    answerIndex: 1,
     answers: [
-      'a',
-      'b',
-      'c'
+      '1208',
+      '1308',
+      '1408'
     ]
   },
   {
@@ -70,9 +70,9 @@ const data: QuestionProps[] = [
     question: 'Hoeveel Dubbele Buurt straten waren er vroeger in Gouda?',
     answerIndex: 0,
     answers: [
-      'a',
-      'b',
-      'c'
+      '2',
+      '4',
+      '6'
     ]
   },
   {
@@ -92,11 +92,11 @@ const data: QuestionProps[] = [
     audio: 'joods-bejaardenhuis.m4a',
     title: 'Joods Bejaardenhuis (De Haven)',
     question: 'Hoeveel tegeltjes voor vermoorde Joodse mensen tel je?',
-    answerIndex: 0,
+    answerIndex: 1,
     answers: [
-      'a',
-      'b',
-      'c'
+      '51',
+      '56',
+      '62'
     ]
   },
   {
@@ -104,11 +104,11 @@ const data: QuestionProps[] = [
     audio: 'kees-faessens-rolwagensteeg.m4a',
     title: 'Kees Faessens Rolwagensteeg',
     question: 'Uit welk jaar kwam de jaarrekening waarin staat wie Kees Faessens was?',
-    answerIndex: 0,
+    answerIndex: 1,
     answers: [
-      'a',
-      'b',
-      'c'
+      '1542',
+      '1642',
+      '1742'
     ]
   },
   {
@@ -116,11 +116,11 @@ const data: QuestionProps[] = [
     audio: 'korte-tiendeweg.m4a',
     title: 'Korte Tiendeweg',
     question: 'Hoeveel tiendwegen zijn er nog in Nederland?',
-    answerIndex: 0,
+    answerIndex: 2,
     answers: [
-      'a',
-      'b',
-      'c'
+      '51',
+      '53',
+      '55'
     ]
   },
   {
@@ -128,11 +128,11 @@ const data: QuestionProps[] = [
     audio: 'oosthaven.m4a',
     title: 'Oosthaven',
     question: 'Hoeveel schepen voeren er vroeger jaarlijks door de grachten?',
-    answerIndex: 0,
+    answerIndex: 1,
     answers: [
-      'a',
-      'b',
-      'c'
+      '1.000',
+      '10.000',
+      '100.000'
     ]
   },
   {
@@ -140,11 +140,11 @@ const data: QuestionProps[] = [
     audio: 'sint-janskerk.m4a',
     title: 'Sint-Janskerk',
     question: 'Hoeveel gebrandschilderde glas-in-lood glazen telt de Sint-Janskerk?',
-    answerIndex: 0,
+    answerIndex: 2,
     answers: [
-      'a',
-      'b',
-      'c'
+      '52',
+      '62',
+      '72'
     ]
   },
   {
@@ -152,11 +152,11 @@ const data: QuestionProps[] = [
     audio: 'st.aloysius-school.m4a',
     title: 'St. Aloysius School',
     question: 'Wanneer is de St. Aloysius School ontworpen?',
-    answerIndex: 0,
+    answerIndex: 2,
     answers: [
-      'a',
-      'b',
-      'c'
+      '1706',
+      '1806',
+      '1906'
     ]
   },
   {
@@ -166,9 +166,9 @@ const data: QuestionProps[] = [
     question: 'Wat is de bijnaam van Maria van Bourgondië?',
     answerIndex: 0,
     answers: [
-      'a',
-      'b',
-      'c'
+      'Maria de Rijke',
+      'Maria de Slimme',
+      'Maria de Schoone'
     ]
   },
   {
@@ -176,11 +176,11 @@ const data: QuestionProps[] = [
     audio: 'stroopwafelmuur.m4a',
     title: 'Stroopwafelmuur',
     question: 'Wanneer opende Gerard Kamphuisen zijn bakkerij met echte stroopwafels?',
-    answerIndex: 0,
+    answerIndex: 1,
     answers: [
-      'a',
-      'b',
-      'c'
+      '1710',
+      '1810',
+      '1910'
     ]
   },
   {
@@ -188,11 +188,11 @@ const data: QuestionProps[] = [
     audio: 'toren-sint-janskerk.m4a',
     title: 'Kerktoren',
     question: 'Hoeveel jaar heeft Gouda stadsrechten?',
-    answerIndex: 0,
+    answerIndex: 2,
     answers: [
-      'a',
-      'b',
-      'c'
+      '550 jaar',
+      '650 jaar',
+      '750 jaar'
     ]
   },
   {
@@ -202,21 +202,21 @@ const data: QuestionProps[] = [
     question: 'Voor welk gebouw waren de gebrandschilderde glas-in-lood glazen van deze kapel eigenlijk bedoelt?',
     answerIndex: 0,
     answers: [
-      'a',
-      'b',
-      'c'
+      'een klooster',
+      'een school',
+      'een kerk'
     ]
   },
   {
     image: 'willem-vroesenhuis.jpg',
     audio: 'willem-vroesenhuis.m4a',
     title: 'Willem Vroesenhuis',
-    question: 'Wat moesten bejaarde Goudenaars achterlaten in de kluisjes?',
-    answerIndex: 0,
+    question: 'Wat moesten bejaarde Gouwenaars achterlaten in de kluisjes?',
+    answerIndex: 1,
     answers: [
-      'a',
-      'b',
-      'c'
+      'kaarsen',
+      'pijpen',
+      'lucifers'
     ]
   }
 ]
