@@ -4,8 +4,8 @@ import Question, { QuestionProps } from './question'
 
 const data: QuestionProps[] = [
   {
-    image: '/images/arti-legi.jpg',
-    audio: '/audio/arti-legi.m4a',
+    image: 'arti-legi.jpg',
+    audio: 'arti-legi.m4a',
     title: 'Arti Legi',
     question: 'Waar staat het woord "legi" voor?',
     answerIndex: 0,
@@ -16,8 +16,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/carillon.jpg',
-    audio: '/audio/carillon.m4a',
+    image: 'carillon.jpg',
+    audio: 'carillon.m4a',
     title: 'Carillon',
     question: 'Waar komt het melodietje van het carillon vandaan?',
     answerIndex: 0,
@@ -28,8 +28,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/catharina-gasthuis.jpg',
-    audio: '/audio/catharina-gasthuis.m4a',
+    image: 'catharina-gasthuis.jpg',
+    audio: 'catharina-gasthuis.m4a',
     title: 'Catharina Gasthuis',
     question: 'Wanneer hield het Catharina Gasthuis op met bestaan als ziekenhuis?',
     answerIndex: 0,
@@ -40,8 +40,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/de-waag.jpg',
-    audio: '/audio/de-waag.m4a',
+    image: 'de-waag.jpg',
+    audio: 'de-waag.m4a',
     title: 'De Waag',
     question: 'Vanaf wanneer bestaat de Goudse Kaasmarkt?',
     answerIndex: 0,
@@ -52,8 +52,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/donkere-sluis.jpg',
-    audio: '/audio/donkere-sluis.m4a',
+    image: 'donkere-sluis.jpg',
+    audio: 'donkere-sluis.m4a',
     title: 'Donkere Sluis',
     question: 'Wanneer werd de Donkere Sluis gebouwd?',
     answerIndex: 0,
@@ -64,8 +64,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/dubbele-buurt.jpg',
-    audio: '/audio/dubbele-buurt.m4a',
+    image: 'dubbele-buurt.jpg',
+    audio: 'dubbele-buurt.m4a',
     title: 'Dubbele Buurt',
     question: 'Hoeveel Dubbele Buurt straten waren er vroeger in Gouda?',
     answerIndex: 0,
@@ -76,8 +76,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/fietsen.jpg',
-    audio: '/audio/fietsen.m4a',
+    image: 'fietsen.jpg',
+    audio: 'fietsen.m4a',
     title: 'Fietsen',
     question: 'Hoeveel fietsen waren er een paar weken geleden in deze steeg?',
     answerIndex: 0,
@@ -88,8 +88,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/joods-bejaardenhuis.jpg',
-    audio: '/audio/joods-bejaardenhuis.m4a',
+    image: 'joods-bejaardenhuis.jpg',
+    audio: 'joods-bejaardenhuis.m4a',
     title: 'Joods Bejaardenhuis (De Haven)',
     question: 'Hoeveel tegeltjes voor vermoorde Joodse mensen tel je?',
     answerIndex: 0,
@@ -100,8 +100,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/kees-faessens-rolwagensteeg.jpg',
-    audio: '/audio/kees-faessens-rolwagensteeg.m4a',
+    image: 'kees-faessens-rolwagensteeg.jpg',
+    audio: 'kees-faessens-rolwagensteeg.m4a',
     title: 'Kees Faessens Rolwagensteeg',
     question: 'Uit welk jaar kwam de jaarrekening waarin staat wie Kees Faessens was?',
     answerIndex: 0,
@@ -112,8 +112,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/korte-tiendeweg.jpg',
-    audio: '/audio/korte-tiendeweg.m4a',
+    image: 'korte-tiendeweg.jpg',
+    audio: 'korte-tiendeweg.m4a',
     title: 'Korte Tiendeweg',
     question: 'Hoeveel tiendwegen zijn er nog in Nederland?',
     answerIndex: 0,
@@ -124,8 +124,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/oosthaven.jpg',
-    audio: '/audio/oosthaven.m4a',
+    image: 'oosthaven.jpg',
+    audio: 'oosthaven.m4a',
     title: 'Oosthaven',
     question: 'Hoeveel schepen voeren er vroeger jaarlijks door de grachten?',
     answerIndex: 0,
@@ -137,7 +137,7 @@ const data: QuestionProps[] = [
   },
   {
     image: 'https://picsum.photos/200/300',
-    audio: '/audio/sint-janskerk.m4a',
+    audio: 'sint-janskerk.m4a',
     title: 'Sint-Janskerk',
     question: 'Hoeveel gebrandschilderde glas-in-lood glazen telt de Sint-Janskerk?',
     answerIndex: 0,
@@ -148,8 +148,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/st.aloysius-school.jpg',
-    audio: '/audio/st.aloysius-school.m4a',
+    image: 'st.aloysius-school.jpg',
+    audio: 'st.aloysius-school.m4a',
     title: 'St. Aloysius School',
     question: 'Wanneer is de St. Aloysius School ontworpen?',
     answerIndex: 0,
@@ -160,8 +160,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/stadhuis.jpg',
-    audio: '/audio/stadhuis.m4a',
+    image: 'stadhuis.jpg',
+    audio: 'stadhuis.m4a',
     title: 'Stadhuis',
     question: 'Wat is de bijnaam van Maria van Bourgondië?',
     answerIndex: 0,
@@ -172,8 +172,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/stroopwafelmuur.jpg',
-    audio: '/audio/stroopwafelmuur.m4a',
+    image: 'stroopwafelmuur.jpg',
+    audio: 'stroopwafelmuur.m4a',
     title: 'Stroopwafelmuur',
     question: 'Wanneer opende Gerard Kamphuisen zijn bakkerij met echte stroopwafels?',
     answerIndex: 0,
@@ -184,8 +184,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/toren-sint-janskerk.jpg',
-    audio: '/audio/toren-sint-janskerk.m4a',
+    image: 'toren-sint-janskerk.jpg',
+    audio: 'toren-sint-janskerk.m4a',
     title: 'Kerktoren',
     question: 'Hoeveel jaar heeft Gouda stadsrechten?',
     answerIndex: 0,
@@ -196,8 +196,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/van-der-vormkapel.jpg',
-    audio: '/audio/van-der-vormkapel.m4a',
+    image: 'van-der-vormkapel.jpg',
+    audio: 'van-der-vormkapel.m4a',
     title: 'Van der Vormkapel',
     question: 'Voor welk gebouw waren de gebrandschilderde glas-in-lood glazen van deze kapel eigenlijk bedoelt?',
     answerIndex: 0,
@@ -208,8 +208,8 @@ const data: QuestionProps[] = [
     ]
   },
   {
-    image: '/images/willem-vroesenhuis.jpg',
-    audio: '/audio/willem-vroesenhuis.m4a',
+    image: 'willem-vroesenhuis.jpg',
+    audio: 'willem-vroesenhuis.m4a',
     title: 'Willem Vroesenhuis',
     question: 'Wat moesten bejaarde Goudenaars achterlaten in de kluisjes?',
     answerIndex: 0,

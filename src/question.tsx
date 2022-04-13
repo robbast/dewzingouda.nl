@@ -22,14 +22,20 @@ export default class Question extends React.PureComponent<QuestionProps & ClassA
       buttons: JSX.Element | JSX.Element[] = answers.map((value: string | number, index: number) => {
         const id = `answer-${index}`
         return <button type="button" className="btn btn-primary" style={{ color: '#eb6334', backgroundColor: '#fdce43', borderColor: '#fdce43' }}>{value}</button>
-      })
+      }),
+      images = ['small', 'medium', 'large', 'original'].map((directory) => '/images/' + directory + '/' + this.props.image),
+      breakpoints = ['600w', '1200w', '2000w', '4000w'],
+      srcset = images.map((image, index) => image + ' ' + breakpoints[index])
 
     return <>
-      <div className="row p-0 g-0 mb-4" style={{ height: '480px' }}>
-        <img src={this.props.image} style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '1rem', objectFit: 'cover' }} />
+      <div className="row p-0 g-0 mb-4" style={{ minHeight: '458px' }}>
+        <img
+          src={images[0]}
+          srcSet={srcset.join(', ')}
+          style={{ borderRadius: '1rem' }} />
       </div>
-      <div className="row p-0 g-0 d-flex">
-        <audio controls preload="auto" src={this.props.audio} style={{ margin: 'auto' }}>
+      <div className="row p-0 g-0 d-flex" style={{ minHeight: '70px' }}>
+        <audio controls preload="auto" src={'/audio/' + this.props.audio} style={{ margin: 'auto' }}>
           Your browser does not support the audio element.
         </audio>
       </div>
