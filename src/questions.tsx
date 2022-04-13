@@ -134,7 +134,7 @@ const questions: QuestionProps[] = [
     ]
   },
   {
-    image: 'https://picsum.photos/200/300',
+    image: 'sint-janskerk.jpg',
     audio: 'sint-janskerk.m4a',
     title: 'Sint-Janskerk',
     question: 'Hoeveel gebrandschilderde glas-in-lood glazen telt de Sint-Janskerk?',
@@ -173,7 +173,7 @@ const questions: QuestionProps[] = [
     image: 'stroopwafelmuur.jpg',
     audio: 'stroopwafelmuur.m4a',
     title: 'Stroopwafelmuur',
-    question: 'Wanneer opende Gerard Kamphuisen zijn bakkerij met echte stroopwafels?',
+    question: 'Uit welk jaar komt de echte siroopwafel?',
     answerIndex: 1,
     answers: [
       '1710',
@@ -198,11 +198,11 @@ const questions: QuestionProps[] = [
     audio: 'van-der-vormkapel.m4a',
     title: 'Van der Vormkapel',
     question: 'Voor welk gebouw waren de gebrandschilderde glas-in-lood glazen van deze kapel eigenlijk bedoelt?',
-    answerIndex: 0,
+    answerIndex: 1,
     answers: [
+      'een kerk',
       'een klooster',
-      'een school',
-      'een kerk'
+      'een school'
     ]
   },
   {

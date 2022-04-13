@@ -19,15 +19,15 @@ export default class Question extends React.PureComponent<QuestionProps & ClassA
 
   render() {
     const { answerIndex, answers } = this.props,
-      buttons: JSX.Element | JSX.Element[] = answers.map((value: string | number, index: number) => {
+      images: string[] = ['small', 'medium', 'large', 'original'].map((directory) => '/images/' + directory + '/' + this.props.image),
+      breakpoints: string[] = ['600w', '1200w', '2000w', '4000w'],
+      srcset: string[] = images.map((image, index) => image + ' ' + breakpoints[index]),
+      buttons: JSX.Element[] = answers.map((value: string | number, index: number) => {
         const id = `answer-${index}`
-        return <button type="button" className="btn btn-primary" style={{ color: '#000', backgroundColor: '#fdce43', borderColor: '#fdce43' }}>
+        return <button key={id} type="button" className="btn btn-primary" style={{ color: '#000', backgroundColor: '#fdce43', borderColor: '#fdce43' }}>
             <strong>{value}</strong>
           </button>
-      }),
-      images = ['small', 'medium', 'large', 'original'].map((directory) => '/images/' + directory + '/' + this.props.image),
-      breakpoints = ['600w', '1200w', '2000w', '4000w'],
-      srcset = images.map((image, index) => image + ' ' + breakpoints[index])
+      })
 
     return <>
       <div className="row p-0 g-0 mb-4" style={{ minHeight: '458px' }}>
