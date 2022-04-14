@@ -1,53 +1,80 @@
-import React, { ClassAttributes, PureComponent } from 'react'
+import React, { SyntheticEvent } from 'react'
+import Answers from './answers'
+import Image from './image'
 
-type QuestionProps = {
+interface Props {
+  answerHandler: () => void,
   image: string,
   audio: string,
   title: string,
   question: string,
   answerIndex: number,
-  answers: (number | string)[]
+  answers: (string)[]
 }
 
-export type { QuestionProps }
+interface State {
+  audioPlaybackEnded: boolean
+}
 
-export default class Question extends React.PureComponent<QuestionProps & ClassAttributes<PureComponent>> {
+export default class Question extends React.PureComponent<Props, State> {
 
-  constructor(props: QuestionProps & ClassAttributes<PureComponent>) {
+  constructor(props: Props) {
     super(props)
+
+    // bind scope so we can access 'this' in handler
+    this.receiveAnswer = this.receiveAnswer.bind(this)
+    this.audioEnded = this.audioEnded.bind(this)
+    this.state = { audioPlaybackEnded: false }
+  }
+
+  receiveAnswer(answer: string) {
+    const { answers, answerIndex } = this.props
+
+    answers.indexOf(answer) === answerIndex && this.props.answerHandler()
+  }
+
+  audioSeeking(event: SyntheticEvent<HTMLMediaElement>) {
+    console.log(event)
+  }
+
+  audioSeeked(event: SyntheticEvent<HTMLMediaElement>) {
+    console.log(event)
+  }
+
+  audioEnded(event: SyntheticEvent<HTMLMediaElement>) {
+    this.setState({ audioPlaybackEnded: true })
   }
 
   render() {
-    const { answerIndex, answers } = this.props,
-      images: string[] = ['small', 'medium', 'large', 'original'].map((directory) => '/images/' + directory + '/' + this.props.image),
-      breakpoints: string[] = ['600w', '1200w', '2000w', '4000w'],
-      srcset: string[] = images.map((image, index) => image + ' ' + breakpoints[index]),
-      buttons: JSX.Element[] = answers.map((value: string | number, index: number) => {
-        const id = `answer-${index}`
-        return <button key={id} type="button" className="btn btn-primary" style={{ color: '#000', backgroundColor: '#fdce43', borderColor: '#fdce43' }}>
-            <strong>{value}</strong>
-          </button>
-      })
+    const { audioPlaybackEnded } = this.state,
+      { audio, image, title, question, answers } = this.props
 
     return <>
       <div className="row p-0 g-0 mb-4" style={{ minHeight: '458px' }}>
-        <img
-          src={images[0]}
-          srcSet={srcset.join(', ')}
-          style={{ borderRadius: '1rem' }} />
+        <Image src={image} />
       </div>
       <div className="row p-0 g-0 mb-4 d-flex" style={{ minHeight: '70px' }}>
-        <audio controls preload="auto" src={'/audio/' + this.props.audio} style={{ margin: 'auto' }}>
+        <audio
+          controls
+          onSeeking={this.audioSeeking}
+          onSeeked={this.audioSeeked}
+          onEnded={this.audioEnded}
+          preload="auto"
+          src={'/audio/' + audio}
+          style={{ margin: 'auto' }}
+        >
           Your browser does not support the audio element.
         </audio>
       </div>
-      <div className="row p-1 g-0 mb-4 text-center card" style={{ backgroundColor: '#eb6334' }}>
-        <h1 style={{ color: '#fdce43' }} className="mt-4 mb-2">{this.props.title}</h1>
-        <p style={{ color: '#fff' }}>{this.props.question}</p>
-      </div>
-      <div className="d-grid gap-2">
-        {buttons}
-      </div>
+      { audioPlaybackEnded && <>
+        <div className="row p-1 g-0 mb-4 text-center card" style={{ backgroundColor: '#eb6334' }}>
+          <h1 style={{ color: '#fdce43' }} className="mt-4 mb-2">{title}</h1>
+          <p style={{ color: '#fff' }}>{question}</p>
+        </div>
+        <div className="d-grid gap-2">
+          <Answers answers={answers} clickHandler={this.receiveAnswer} />
+        </div>
+      </> }
     </>
   }
 }

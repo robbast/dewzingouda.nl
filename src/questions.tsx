@@ -1,6 +1,13 @@
-import { QuestionProps } from './question'
+export interface Question {
+  image: string,
+  audio: string,
+  title: string,
+  question: string,
+  answerIndex: number,
+  answers: string[]
+}
 
-const questions: QuestionProps[] = [
+const questions: Question[] = [
   {
     image: 'arti-legi.jpg',
     audio: 'arti-legi.m4a',
@@ -88,7 +95,7 @@ const questions: QuestionProps[] = [
   {
     image: 'joods-bejaardenhuis.jpg',
     audio: 'joods-bejaardenhuis.m4a',
-    title: 'Joods Bejaardenhuis (De Haven)',
+    title: 'Joods Bejaardenhuis',
     question: 'Hoeveel tegeltjes voor vermoorde Joodse mensen tel je?',
     answerIndex: 1,
     answers: [
