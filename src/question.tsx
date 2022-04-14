@@ -1,4 +1,4 @@
-import React, { SyntheticEvent } from 'react'
+import React from 'react'
 import Answers from './answers'
 import Image from './image'
 
@@ -16,7 +16,7 @@ interface State {
   audioPlaybackEnded: boolean
 }
 
-export default class Question extends React.PureComponent<Props, State> {
+export default class extends React.PureComponent<Props, State> {
 
   constructor(props: Props) {
     super(props)
@@ -33,15 +33,7 @@ export default class Question extends React.PureComponent<Props, State> {
     answers.indexOf(answer) === answerIndex && this.props.answerHandler()
   }
 
-  audioSeeking(event: SyntheticEvent<HTMLMediaElement>) {
-    console.log(event)
-  }
-
-  audioSeeked(event: SyntheticEvent<HTMLMediaElement>) {
-    console.log(event)
-  }
-
-  audioEnded(event: SyntheticEvent<HTMLMediaElement>) {
+  audioEnded(/*event: SyntheticEvent<HTMLMediaElement>*/) {
     this.setState({ audioPlaybackEnded: true })
   }
 
@@ -50,18 +42,16 @@ export default class Question extends React.PureComponent<Props, State> {
       { audio, image, title, question, answers } = this.props
 
     return <>
-      <div className="row p-0 g-0 mb-4" style={{ minHeight: '458px' }}>
+      <div className="row p-0 g-0 mb-4" style={{ minHeight: '477px' }}>
         <Image src={image} />
       </div>
       <div className="row p-0 g-0 mb-4 d-flex" style={{ minHeight: '70px' }}>
         <audio
           controls
-          onSeeking={this.audioSeeking}
-          onSeeked={this.audioSeeked}
-          onEnded={this.audioEnded}
           preload="auto"
           src={'/audio/' + audio}
           style={{ margin: 'auto' }}
+          onEnded={this.audioEnded}
         >
           Your browser does not support the audio element.
         </audio>

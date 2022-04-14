@@ -1,4 +1,4 @@
-import React, { ClassAttributes, PureComponent } from 'react'
+import React from 'react'
 
 interface Props {
   src: string
@@ -7,7 +7,7 @@ interface Props {
 const sizes: string[] = ['small', 'medium', 'large', 'original']
 const breakpoints: string[] = ['600w', '1200w', '2000w', '4000w']
 
-export default class Image extends React.PureComponent<Props> {
+export default class extends React.PureComponent<Props> {
 
   constructor(props: Props) {
     super(props)
@@ -21,6 +21,7 @@ export default class Image extends React.PureComponent<Props> {
       className="rounded"
       src={images[0]}
       srcSet={srcset.join(', ')}
+      style={{ backgroundColor: '#fdce43' }}
     />
   }
 }

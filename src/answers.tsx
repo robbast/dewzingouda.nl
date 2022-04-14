@@ -5,7 +5,7 @@ interface Props {
   clickHandler: (answer: string) => void
 }
 
-export default class Image extends React.PureComponent<Props> {
+export default class extends React.PureComponent<Props> {
 
   constructor(props: Props) {
     super(props)

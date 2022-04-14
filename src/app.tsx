@@ -7,7 +7,7 @@ interface State {
   activeIndex: number
 }
 
-export default class App extends React.PureComponent<ClassAttributes<PureComponent>, State> {
+export default class extends React.PureComponent<ClassAttributes<PureComponent>, State> {
 
   constructor(props: ClassAttributes<PureComponent>) {
     super(props)
@@ -32,6 +32,10 @@ export default class App extends React.PureComponent<ClassAttributes<PureCompone
   }
 
   render() {
-    return <Question key={this.state.activeIndex} {...{answerHandler: this.nextQuestion, ...questions[this.state.activeIndex]}} />
+    return <Question
+      key={this.state.activeIndex}
+      answerHandler={this.nextQuestion}
+      {...questions[this.state.activeIndex]}
+    />
   }
 }
