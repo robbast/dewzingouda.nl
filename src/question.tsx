@@ -26,7 +26,7 @@ export default class extends React.PureComponent<Props, State> {
     this.audioEnded = this.audioEnded.bind(this)
 
     this.state = {
-      audioPlaybackEnded: true
+      audioPlaybackEnded: false
     }
   }
 
