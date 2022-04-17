@@ -5,6 +5,7 @@ function play(url: string) {
     audio.autoplay = true                        // autoplay when loaded
     audio.onerror = reject                       // on error, reject
     audio.onended = resolve                      // when done, resolve
+    audio.volume = 0.5                           // set volume to 50%
 
     audio.src = url
   })
