@@ -12,18 +12,15 @@ export default class extends React.PureComponent<ClassAttributes<PureComponent>,
   constructor(props: ClassAttributes<PureComponent>) {
     super(props)
 
-    // bind scope so we can access 'this' in handler
-    this.nextQuestion = this.nextQuestion.bind(this)
-
     let index: number
 
     if (window.location.hash) {
       const hash = decodeURIComponent(window.location.hash.substring(1))
 
       // remove hash
-      history.replaceState(null, 'Beleef Gouda', null)
+      history.replaceState(null, '', '')
 
-      // pick question using hash
+      // pick question based on hash provided
       index = questions.findIndex(question => hash === question.title)
 
       if (index === -1) {
@@ -40,19 +37,19 @@ export default class extends React.PureComponent<ClassAttributes<PureComponent>,
     }
   }
 
-  nextQuestion() {
-    const currentIndex = this.state.activeIndex,
-      nextIndex = questions.length - 1  === currentIndex ? 0 : currentIndex + 1
-
+  setQuestion(question: number) {
     this.setState({
-      activeIndex: nextIndex
+      activeIndex: question
     })
   }
 
   render() {
+    const currentIndex = this.state.activeIndex,
+      nextIndex = questions.length - 1  === currentIndex ? 0 : currentIndex + 1
+
     return <Question
       key={this.state.activeIndex}
-      correctAnswerHandler={this.nextQuestion}
+      correctAnswerHandler={() => this.setQuestion(nextIndex)}
       {...questions[this.state.activeIndex]}
     />
   }
