@@ -9,18 +9,6 @@ export interface Question {
 
 const questions: Question[] = [
   {
-    image: 'stadhuis.jpg',
-    audio: 'stadhuis.m4a',
-    title: 'Stadhuis',
-    question: 'Wat is de bijnaam van Maria van Bourgondië?',
-    answerIndex: 0,
-    answers: [
-      'Maria de Rijke',
-      'Maria de Slimme',
-      'Maria de Schoone'
-    ]
-  },
-  {
     image: 'carillon.jpg',
     audio: 'carillon.m4a',
     title: 'Carillon',
@@ -141,6 +129,18 @@ const questions: Question[] = [
     ]
   },
   {
+    image: 'lange-noodgodsstraat.jpg',
+    audio: 'lange-noodgodsstraat.m4a',
+    title: 'Lange Noodgodsstraat',
+    question: 'Wanneer besloot het stadsbestuur dit Katholieke heiligdom te slopen?',
+    answerIndex: 1,
+    answers: [
+      '1476',
+      '1576',
+      '1676'
+    ]
+  },
+  {
     image: 'oosthaven.jpg',
     audio: 'oosthaven.m4a',
     title: 'Oosthaven',
@@ -222,6 +222,18 @@ const questions: Question[] = [
       '6',
       '7',
       '9'
+    ]
+  },
+  {
+    image: 'stadhuis.jpg',
+    audio: 'stadhuis.m4a',
+    title: 'Stadhuis',
+    question: 'Wat is de bijnaam van Maria van Bourgondië?',
+    answerIndex: 0,
+    answers: [
+      'Maria de Rijke',
+      'Maria de Slimme',
+      'Maria de Schoone'
     ]
   }
 ]
