@@ -4,8 +4,19 @@ interface Props {
   src: string
 }
 
-const sizes: string[] = ['small', 'medium', 'large', 'original']
-const breakpoints: string[] = ['600w', '1200w', '2000w', '4000w']
+const sizes: string[] = [
+  'small',
+  'medium',
+  'large',
+  'original',
+]
+
+const breakpoints: string[] = [
+  '600w',
+  '1200w',
+  '2000w',
+  '4000w',
+]
 
 export default class extends React.PureComponent<Props> {
 
@@ -14,7 +25,7 @@ export default class extends React.PureComponent<Props> {
   }
 
   render() {
-    const images: string[] = sizes.map((directory) => '/images/' + directory + '/' + this.props.src),
+    const images: string[] = sizes.map((directory) => './images/' + directory + '/' + this.props.src),
       srcset: string[] = images.map((image, index) => image + ' ' + breakpoints[index])
 
     return <img

@@ -85,11 +85,11 @@ const questions: Question[] = [
     audio: 'fietsen.m4a',
     title: 'Fietsen',
     question: 'Hoeveel fietsen waren er een paar weken geleden in deze steeg?',
-    answerIndex: 0,
+    answerIndex: 2,
     answers: [
-      'a',
-      'b',
-      'c'
+      '6',
+      '7',
+      '9'
     ]
   },
   {

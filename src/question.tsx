@@ -3,7 +3,7 @@ import Answers from './answers'
 import Image from './image'
 
 interface Props {
-  answerHandler: () => void,
+  correctAnswerHandler: () => void,
   image: string,
   audio: string,
   title: string,
@@ -22,15 +22,16 @@ export default class extends React.PureComponent<Props, State> {
     super(props)
 
     // bind scope so we can access 'this' in handler
-    this.receiveAnswer = this.receiveAnswer.bind(this)
+    this.correctAnswerHandler = this.correctAnswerHandler.bind(this)
     this.audioEnded = this.audioEnded.bind(this)
-    this.state = { audioPlaybackEnded: false }
+
+    this.state = {
+      audioPlaybackEnded: true
+    }
   }
 
-  receiveAnswer(answer: string) {
-    const { answers, answerIndex } = this.props
-
-    answers.indexOf(answer) === answerIndex && this.props.answerHandler()
+  correctAnswerHandler() {
+    this.props.correctAnswerHandler()
   }
 
   audioEnded(/*event: SyntheticEvent<HTMLMediaElement>*/) {
@@ -39,7 +40,7 @@ export default class extends React.PureComponent<Props, State> {
 
   render() {
     const { audioPlaybackEnded } = this.state,
-      { audio, image, title, question, answers } = this.props
+      { audio, image, title, question, answers, answerIndex } = this.props
 
     return <>
       <div className="row p-0 g-0 mb-4" style={{ minHeight: '477px' }}>
@@ -49,20 +50,20 @@ export default class extends React.PureComponent<Props, State> {
         <audio
           controls
           preload="auto"
-          src={'/audio/' + audio}
+          src={'./audio/' + audio}
           style={{ margin: 'auto' }}
           onEnded={this.audioEnded}
         >
-          Your browser does not support the audio element.
+          Je browser ondersteund het audio element niet :-(
         </audio>
       </div>
       { audioPlaybackEnded && <>
-        <div className="row p-1 g-0 mb-4 text-center card" style={{ backgroundColor: '#eb6334' }}>
-          <h1 style={{ color: '#fdce43' }} className="mt-4 mb-2">{title}</h1>
+        <div className="row p-2 g-0 mb-4 text-center card" style={{ backgroundColor: '#eb6334' }}>
+          <h1 style={{ color: '#fdce43' }} className="my-2">{title}</h1>
           <p style={{ color: '#fff' }}>{question}</p>
         </div>
         <div className="d-grid gap-2">
-          <Answers answers={answers} clickHandler={this.receiveAnswer} />
+          <Answers answers={answers} answerIndex={answerIndex} correctHandler={this.correctAnswerHandler} />
         </div>
       </> }
     </>
