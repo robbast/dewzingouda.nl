@@ -17,15 +17,15 @@ export default class extends React.PureComponent<ClassAttributes<PureComponent>,
     if (window.location.hash) {
       const hash = decodeURIComponent(window.location.hash.substring(1))
 
-      // remove hash
-      history.replaceState(null, '', '')
-
       // pick question based on hash provided
       index = questions.findIndex(question => hash === question.title)
 
       if (index === -1) {
         // if there was no match, pick a random question as starting point
         index = getRandomInt(0, questions.length)
+
+        // remove hash
+        history.replaceState(null, '', '/')
       }
     } else {
       // pick a random question as starting point
@@ -41,6 +41,8 @@ export default class extends React.PureComponent<ClassAttributes<PureComponent>,
     this.setState({
       activeIndex: question
     })
+
+    history.replaceState(null, '', '#' + encodeURIComponent(questions[question].title))
   }
 
   render() {
