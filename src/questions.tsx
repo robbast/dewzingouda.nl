@@ -93,6 +93,18 @@ const questions: Question[] = [
     ]
   },
   {
+    image: 'erasmus.jpg',
+    audio: 'erasmus.mp3',
+    title: 'Erasmus',
+    question: 'Welk bekend boek heeft Erasmus geschreven?',
+    answerIndex: 2,
+    answers: [
+      'Lof der Goedheid',
+      'Lof der Zoetheid',
+      'Lof der Zotheid'
+    ]
+  },
+  {
     image: 'willem-vroesenhuis.jpg',
     audio: 'willem-vroesenhuis.m4a',
     title: 'Willem Vroesenhuis',
@@ -102,6 +114,18 @@ const questions: Question[] = [
       'kaarsen',
       'pijpen',
       'lucifers'
+    ]
+  },
+  {
+    image: 'weeshuis.jpg',
+    audio: 'weeshuis.mp3',
+    title: 'Weeshuis',
+    question: 'Voor welke kinderen is dit weeshuis opgericht?',
+    answerIndex: 1,
+    answers: [
+      'kinderen van Poorters',
+      'kinderen van een lage sociale klasse',
+      'kinderen van rijke regenten'
     ]
   },
   {
