@@ -165,6 +165,18 @@ const questions: Question[] = [
     ]
   },
   {
+    image: 'coornhert.jpg',
+    audio: 'coornhert.mp3',
+    title: 'Dirck Volckertszoon Coornhert',
+    question: 'Wanneer vestigde Coornhert zich in Gouda?',
+    answerIndex: 2,
+    answers: [
+      '1548',
+      '1568',
+      '1588'
+    ]
+  },
+  {
     image: 'catharina-gasthuis.jpg',
     audio: 'catharina-gasthuis.m4a',
     title: 'Catharina Gasthuis',

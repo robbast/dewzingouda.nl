@@ -1,7 +1,8 @@
 {
+  "name": "dewzingouda.nl",
   "dependencies": {
-    "@sentry/react": "^6.19.6",
-    "@sentry/tracing": "^6.19.6",
+    "@sentry/react": "^6",
+    "@sentry/tracing": "^6",
     "react": "^18",
     "react-dom": "^18"
   },
