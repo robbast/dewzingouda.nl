@@ -2,6 +2,8 @@ import { createRoot, Root } from 'react-dom/client'
 import App from './app'
 import * as Sentry from '@sentry/react'
 import { BrowserTracing } from '@sentry/tracing'
+import questions from './questions'
+import QRCodes from './qrcodes'
 
 if (process.env.NODE_ENV !== 'development') {
   Sentry.init({
@@ -15,4 +17,9 @@ if (process.env.NODE_ENV !== 'development') {
 const container: HTMLElement = document.getElementById('root') as HTMLElement,
   root: Root = createRoot(container)
 
-root.render(<App />)
+if (window.location.hash === '#qrcodes') {
+  root.render(<QRCodes questions={questions} />)
+} else {
+  root.render(<App />)
+}
+
