@@ -14,8 +14,13 @@ if (process.env.NODE_ENV !== 'development') {
   })
 }
 
-const container: HTMLElement = document.getElementById('root') as HTMLElement,
-  root: Root = createRoot(container)
+const container: HTMLElement = document.getElementById('root') as HTMLElement
+
+if ( ! container) {
+  throw 'Element "#root" not found!'
+}
+
+const root: Root = createRoot(container)
 
 if (window.location.hash === '#qrcodes') {
   root.render(<QRCodes questions={questions} />)
